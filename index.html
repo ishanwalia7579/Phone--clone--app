@@ -8,16 +8,21 @@
 </head>
 <body>
     <div class="iphone">
+        <!-- Status Bar -->
         <div class="status-bar">
             <div>100%</div>
             <div>WiFi</div>
             <div>🔋</div>
         </div>
+
+        <!-- Lock Screen -->
         <div class="lock-screen" id="lockScreen">
             <div class="time">9:45</div>
             <div class="date">Saturday, October 29</div>
             <button class="unlock" onclick="unlockPhone()">Click to Open</button>
         </div>
+
+        <!-- Home Screen -->
         <div class="home-screen" id="homeScreen" style="display: none;">
             <div class="grid">
                 <div class="app" onclick="showNotification('You have a new message!')">📱</div>
@@ -25,23 +30,29 @@
                 <div class="app" onclick="openCamera()">📷</div>
                 <div class="app" onclick="showNotification('New email received!')">📧</div>
                 <div class="app" onclick="showNotification('New song added!')">🎵</div>
-                <div class="app" onclick="showNotification('New song added!')">⏰</div>
-                <div class="app" onclick="showNotification('New song added!')"></div>
-                <div class="app" onclick="showNotification('New song added!')"></div>
-                <div class="app" onclick="showNotification('New song added!')"></div>
+                <div class="app" onclick="showNotification('Alarm set!')">⏰</div>
+                <div class="app" onclick="showNotification('Feature coming soon!')">📂</div>
+                <div class="app" onclick="showNotification('Feature coming soon!')">📖</div>
+                <div class="app" onclick="showNotification('Feature coming soon!')">🌐</div>
             </div>
+
+            <!-- Notification Panel -->
             <div class="notification-panel" id="notificationPanel">
                 <div class="notification" id="notificationMessage"></div>
                 <div class="notification" onclick="hideNotification()">Dismiss</div>
             </div>
-            <div class="settings" id="settingsPanel">
+
+            <!-- Settings Panel -->
+            <div class="settings" id="settingsPanel" style="display: none;">
                 <h3>Settings</h3>
                 <label class="toggle">
                     <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()"> Dark Mode
                 </label>
                 <button onclick="closeSettings()">Close</button>
             </div>
-            <div class="camera" id="cameraPanel" style="display:none;">
+
+            <!-- Camera Panel -->
+            <div class="camera" id="cameraPanel" style="display: none;">
                 <h3>Camera</h3>
                 <button onclick="capturePhoto()">Capture Photo</button>
                 <div id="photoMessage"></div>
@@ -49,6 +60,8 @@
             </div>
         </div>
     </div>
+
+    <!-- JavaScript -->
     <script src="Tab.js"></script>
 </body>
 </html>
